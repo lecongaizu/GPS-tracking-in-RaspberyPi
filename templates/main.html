@@ -1,0 +1,30 @@
+<html>
+   <body>
+         <h3>GPS-Information</h3>
+         
+         <p> Time: {{time}}</p>
+         <p> Latitude: {{lat}}</p>
+         <p> Longitude: {{lon}}</p>
+   </body>
+   
+      <body>
+   
+      <table border = 1>
+         <thead>
+			<td>Date</td>
+            <td>Latitude</td>
+            <td>Longitude></td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+			   <td>{{row["times"]}}</td>
+               <td>{{row["latitudes"]}}</td>
+               <td>{{row["longitudes"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+   </body>
+   
+</html>
